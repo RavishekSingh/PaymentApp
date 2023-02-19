@@ -6,10 +6,18 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.servers.Server;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
+@OpenAPIDefinition(
+		servers={
+			@Server(url="/", description = "Default Server URL")	
+	
+            }
+		)
 public class QuickPayApplication {
 	
 //	Payment wallet Application
